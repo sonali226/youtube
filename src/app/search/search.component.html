@@ -1,0 +1,37 @@
+<input #myvalue type="text">
+<button (click)="log(myvalue.value)">search</button>
+
+    <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4" (click)="log(myvalue.value)">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title></mat-card-title>
+             
+            </mat-card-header>
+            
+            <mat-card-content>
+                    <mat-grid-list cols="2" rowHeight="2:1">
+                            <mat-grid-tile>
+                            <h2><a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                                <img mat-card-image [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+                                </h2>
+                            </mat-grid-tile>
+                            <mat-grid-tile>
+                            
+                           <mat-card-actions>
+                                       <h4>
+                                        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                                        </a></h4>     
+                                            <p>{{video.snippet.description}}</p>
+                                           
+                                        </mat-card-actions>
+                                    </mat-grid-tile>
+                          </mat-grid-list>
+                   
+               
+            </mat-card-content>
+            
+          </mat-card>
+          </div>
+
+

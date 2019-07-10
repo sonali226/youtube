@@ -1,0 +1,11 @@
+.example-card {
+    width:250px;
+   float:left;
+   text-align: center;
+   padding:30px;
+   margin-top:10px;
+   margin-left: 30px;
+  }
+  mat-card-actions{
+      height:50px;
+  }
